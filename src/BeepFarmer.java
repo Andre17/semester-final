@@ -1,10 +1,17 @@
 import org.asl.karelx.Farmer;
-
 /**
  * Represents a farmer capable of sowing or reaping beepers from a rectangular garden
  *
  */
 public class BeepFarmer extends Farmer {
+public BeepFarmer()
+   {
+   super();
+   }
+   public BeepFarmer (int x, int y)
+   {
+   super(x, y, Display.NORTH, Display.INFINITY);
+}
 
 	//  TODO Add one or more constructors, as needed
 	

@@ -4,8 +4,16 @@ import org.asl.karelx.Uberbot;
  * Patrols an area defined by four beepers.
  * 
  */
-public class Sentry extends Uberbot {
-
+public class Sentry extends Uberbot 
+{
+public Sentry()
+   {
+   super();
+   }
+   public Sentry (int x, int y)
+   {
+   super(x, y, Display.NORTH, Display.INFINITY);
+}
 	// Provide one or more constructors, as you wish
 	
 	/**
@@ -15,6 +23,12 @@ public class Sentry extends Uberbot {
 	 *
 	 */
 	public void patrol() {
-		// TODO You implement this method.
+		if(frontIsClear()) {
+      move();
+      }
+      else {
+      turnRight();
+      }
+      // TODO You implement this method.
 	}
 }
